@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package foo.b;
+
+message Bar {
+    // There must be a compile error because we are missing `import "foo/a.proto"` here
+    required a.A baz = 1;
+}
